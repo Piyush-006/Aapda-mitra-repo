@@ -28,14 +28,11 @@ export function Header({ title, showNotifications = true, onMenuClick }: HeaderP
   };
 
   const Logo = () => (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="32" height="32" rx="8" fill="#DC2626"/>
-      <path d="M16 6L20.5 12H11.5L16 6Z" fill="white"/>
-      <rect x="8" y="14" width="16" height="2" fill="white"/>
-      <circle cx="12" cy="20" r="2" fill="white"/>
-      <circle cx="20" cy="20" r="2" fill="white"/>
-      <path d="M10 24H22C22.5523 24 23 24.4477 23 25C23 25.5523 22.5523 26 22 26H10C9.44772 26 9 25.5523 9 25C9 24.4477 9.44772 24 10 24Z" fill="white"/>
-    </svg>
+    <img 
+      src="/logo_aapda.jpg" 
+      alt="Aapda Mitra Logo" 
+      className="w-8 h-8 object-contain"
+    />
   );
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">

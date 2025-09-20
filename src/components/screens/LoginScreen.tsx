@@ -66,14 +66,11 @@ export function LoginScreen() {
   };
 
   const LoginLogo = () => (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="48" height="48" rx="12" fill="#DC2626"/>
-      <path d="M24 9L30.75 18H17.25L24 9Z" fill="white"/>
-      <rect x="12" y="21" width="24" height="3" fill="white"/>
-      <circle cx="18" cy="30" r="3" fill="white"/>
-      <circle cx="30" cy="30" r="3" fill="white"/>
-      <path d="M15 36H33C33.8284 36 34.5 36.6716 34.5 37.5C34.5 38.3284 33.8284 39 33 39H15C14.1716 39 13.5 38.3284 13.5 37.5C13.5 36.6716 14.1716 36 15 36Z" fill="white"/>
-    </svg>
+    <img 
+      src="/logo_aapda.jpg" 
+      alt="Aapda Mitra Logo" 
+      className="w-12 h-12 object-contain mx-auto"
+    />
   );
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
