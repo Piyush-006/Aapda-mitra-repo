@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Shield, Zap } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { useApp } from '../../contexts/AppContext';
 
 export function SplashScreen() {
@@ -20,6 +20,16 @@ export function SplashScreen() {
     };
   }, [setCurrentScreen]);
 
+  const MainLogo = () => (
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="80" height="80" rx="20" fill="white"/>
+      <path d="M40 15L51.25 30H28.75L40 15Z" fill="#DC2626"/>
+      <rect x="20" y="35" width="40" height="5" fill="#DC2626"/>
+      <circle cx="30" cy="50" r="5" fill="#DC2626"/>
+      <circle cx="50" cy="50" r="5" fill="#DC2626"/>
+      <path d="M25 60H55C56.3807 60 57.5 61.1193 57.5 62.5C57.5 63.8807 56.3807 65 55 65H25C23.6193 65 22.5 63.8807 22.5 62.5C22.5 61.1193 23.6193 60 25 60Z" fill="#DC2626"/>
+    </svg>
+  );
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-500 via-red-600 to-orange-600 flex items-center justify-center relative overflow-hidden">
       {/* Background Pattern */}
@@ -37,8 +47,8 @@ export function SplashScreen() {
           animationPhase >= 1 ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
         }`}>
           <div className="relative inline-block">
-            <div className="bg-white rounded-full p-6 shadow-2xl">
-              <Shield className="w-16 h-16 text-red-600" />
+            <div className="shadow-2xl rounded-3xl">
+              <MainLogo />
             </div>
             <div className={`absolute -top-2 -right-2 transition-all duration-500 delay-300 ${
               animationPhase >= 2 ? 'scale-100 opacity-100' : 'scale-0 opacity-0'

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Lock, ArrowLeft, Shield, CheckCircle } from 'lucide-react';
+import { Phone, Lock, ArrowLeft, CheckCircle } from 'lucide-react';
 import { useApp } from '../../contexts/AppContext';
 import { User } from '../../types';
 import { Card } from '../ui/Card';
@@ -65,6 +65,16 @@ export function LoginScreen() {
     }
   };
 
+  const LoginLogo = () => (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="48" height="48" rx="12" fill="#DC2626"/>
+      <path d="M24 9L30.75 18H17.25L24 9Z" fill="white"/>
+      <rect x="12" y="21" width="24" height="3" fill="white"/>
+      <circle cx="18" cy="30" r="3" fill="white"/>
+      <circle cx="30" cy="30" r="3" fill="white"/>
+      <path d="M15 36H33C33.8284 36 34.5 36.6716 34.5 37.5C34.5 38.3284 33.8284 39 33 39H15C14.1716 39 13.5 38.3284 13.5 37.5C13.5 36.6716 14.1716 36 15 36Z" fill="white"/>
+    </svg>
+  );
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
@@ -80,8 +90,8 @@ export function LoginScreen() {
         <Card padding="lg">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-              <Shield className="w-6 h-6 text-red-600" />
+            <div className="mx-auto mb-4">
+              <LoginLogo />
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">
               {step === 'phone' && 'Enter your phone number'}
